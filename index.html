@@ -6,6 +6,7 @@
 <html lang="en">
     <!--<![endif]-->
     <head>
+        
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -16,11 +17,22 @@
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
         <!-- customize this visual settings -->
+         
+        <!-- icon css-->
+        <link rel="stylesheet" href="assets/elagent-icon/style.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/all.css">
+        <link rel="stylesheet" href="assets/niceselectpicker/nice-select.css">
+        <link rel="stylesheet" href="assets/animation/animate.css">
+        <link rel="stylesheet" href="assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!--link -->
+        
         <style>
             @font-face {
                 font-family: 'Inter';
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 200;
                 font-display: swap;
                 src: url('Inter-Bold.woff2?v=3.15') format('woff2'),
                     url('Inter-Bold.woff?v=3.15') format('woff');
@@ -30,33 +42,32 @@
                     'Segoe UI', Helvetica, Arial, sans-serif,
                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
                 --f-headline-family: 'Inter', sans-serif;
-                --c-body-background: #ffffff;
+                --c-body-background: #10b3d6;
                 --c-nav-bg: #111111;
                 --c-nav-font: #ffffff;
                 --c-search-headline: #ffffff;
                 --c-search-placeholder: #ffffff;
                 --c-search-placeholder-clip: #ffffff;
-                --c-search-boxshadow: rgb(127, 130, 133) 0px 0px 10px;
-                --c-search-text: #4043c1;
+                --c-search-text: #ffffff;
                 --g-search-gradient: linear-gradient(
                     125deg,
-                    #ff8700 10%,
-                    #231e4b 70%,
+                    #10b3d6 0%,
+                    #1d2746  70%,
                     #1932b4 150%
                 );
                 --g-moz-search-gradient: -moz-linear-gradient(
                     125deg,
-                    #ff8700 10%,
+                    #10b3d6 10%,
                     #1c1127 70%,
                     #1932b4 150%
                 );
                 --g-webkit-search-gradient: -webkit-linear-gradient(
                     125deg,
-                    #ff8700 10%,
+                    #10b3d6 10%,
                     #1c0e2b 70%,
                     #1932b4 150%
                 );
-                --c-search-bg-fallback: rgb(245, 142, 101);
+                --c-search-bg-fallback: rgb(248, 248, 248);
                 --icon-search: url('./search.svg');
                 --c-content-headline: #111;
                 --c-show-more-text: #111;
@@ -90,17 +101,33 @@
         <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
         <script src="script.js"></script>
     </head>
-    <body>
-        <div class="topnav">
-            <div class="container">
-                <div class="col-12">
-                    <a href="#home">Your Branding</a>
+    <body data-spy="scroll" data-target="#navbar-example3" data-offset="86" data-scroll-animation="true" class="doc">
+        <div id="preloader">
+            <div id="ctn-preloader" class="ctn-preloader">
+                <div class="round_spinner">
+                    <div class="spinner"></div>
+                    <div class="text">
+                        <img src="img/spinner_logo.png" alt="">
+                        <h4><span>kb</span>Doc</h4>
+                    </div>
                 </div>
+                <h2 class="head">Did You Know?</h2>
+                <p></p>
             </div>
         </div>
-        <div class="search" id="js-search">
+        
+        <section class="breadcrumb_area">
+            <img class="p_absolute bl_left" src="img/v.svg" alt="">
+            <img class="p_absolute bl_right" src="img/home_one/b_leaf.svg" alt="">
+            <img class="p_absolute star" src="img/home_one/banner_bg.png" alt="">
+            <img class="p_absolute wave_shap_one" src="img/blog-classic/shap_01.png" alt="">
+            <img class="p_absolute wave_shap_two" src="img/blog-classic/shap_02.png" alt="">
+            <img class="p_absolute one wow fadeInRight" src="img/home_one/b_man_two.png" alt="">
+            <img class="p_absolute two wow fadeInUp" data-wow-delay="0.2s" src="img/home_one/flower.png" alt="">
+        
+        </section>
+        <section><div class="search" id="js-search">
             <div class="container">
-                <div class="col-12"><h1>Help Center</h1></div>
                 <div class="col-12">
                     <form action="#" id="search-form">
                         <input
@@ -108,7 +135,7 @@
                             id="js-search-bar"
                             maxlength="30"
                             class="search-bar"
-                            placeholder="How can we help?"
+                            placeholder="Ada yang bisa kami bantu?"
                             aria-label="Search"
                             autocomplete="off"
                         />
@@ -116,7 +143,8 @@
                 </div>
                 <div class="col-12 results" id="js-search-results"></div>
             </div>
-        </div>
+        </div></section>
+        
         <div class="container content" id="js-content">
             <div class="grid-wrapper">
                 <div class="col-4">
@@ -164,5 +192,24 @@
                 <span class="modal-chat-btn" id="js-letschat">Ask us</span>
             </div>
         </div>
+
+    <!--Script-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/pre-loader.js"> </script>
+    <script src="assets/bootstrap/js/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-select.min.js"></script>
+    <script src="assets/font-size/js/rv-jquery-fontsize-2.0.3.js"></script>
+    <script src="js/parallaxie.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/jquery.wavify.js"></script>
+    <script src="js/anchor.js"></script>
+    <script src="assets/mailchimp/plugins.js"></script>
+    <script src="assets/wow/wow.min.js"></script>
+    <script src="assets/niceselectpicker/jquery.nice-select.min.js"></script>
+    <script src="assets/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
     </body>
+
+    
 </html>
